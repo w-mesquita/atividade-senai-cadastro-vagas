@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>Consulta de Vagas</mat-card-title>
+  <mat-card-content>
+    <table class="table">
+      <thead>
+        <tr class="table-light">
+          <th>ID</th>
+          <th>Descrição</th>
+          <th>Requisitos</th>
+          <th>Remuneração</th>
+          <th>Benefícios</th>
+          <th>Local</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="vagas.length">
+        <tr  class="" *ngFor="let vaga of vagas">
+          <td>{{vaga.id}}</td>
+          <td>{{vaga.descricao}}</td>
+          <td>{{vaga.requisitos}}</td>
+          <td>{{vaga.remuneracao}}</td>
+          <td>{{vaga.beneficios}}</td>
+          <td>{{vaga.local}}</td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="!vagas.length">
+        <tr>
+          <td colspan="8" >
+            <h4>Nenhuma vaga encontrada!</h4>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </mat-card-content>
+</mat-card>
